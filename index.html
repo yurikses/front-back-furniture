@@ -3,179 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
     <title>Title</title>
 </head>
 <body>
 <header>
-    <div>
+    <div class="navigation">
         <img src="assets/icons/Search.png" height="16" width="16" alt="иконка поиск">
-        <img src="assets/img/logo.png" height="17" width="64" alt="лого">
-        <img src="assets/icons/ShoppingCart.png" height="16" width="16" alt="иконка корзины">
-        <img src="assets/icons/UserAvatar.png" height="16" width="16" alt="иконка пользователя" >
+        <img class="logo" src="assets/img/logo.png" height="17" width="64" alt="лого">
+        <div class="navigation-right">
+            <img src="assets/icons/ShoppingCart.png" height="16" width="16" alt="иконка корзины">
+            <img src="assets/icons/UserAvatar.png" height="16" width="16" alt="иконка пользователя" >
+        </div>
+
     </div>
-    <ul>
-        <li>Plant pots</li>
-        <li>Ceramics</li>
-        <li>Tables</li>
-        <li>Chairs</li>
-        <li>Crockery</li>
-        <li>Tableware</li>
-        <li>Cutlery</li>
-    </ul>
+    <div class="header-sections">
+        <a class="basic-link" href="#main">Main</a>
+        <a class="basic-link" href="#difference">Differences</a>
+        <a class="basic-link" href="#new-products">New Products</a>
+        <a class="basic-link" href="#populars">Popular goods</a>
+        <a class="basic-link" href="#contacts">Contacts</a>
+        <a class="basic-link" href="#ideals">Our goals</a>
+    </div>
 </header>
-<main>
-    <section>
-        <div>
-            <h2>The furniture brand for the <br> future, with timeless designs</h2>
-            <a href="#">View collection</a>
-            <p>A new era in eco friendly furniture with Avelon, the French luxury retail brand <br>
+<main class="main-content">
+    <section id="main" class="main-poster">
+        <div class="main-poster-left">
+            <h2 class="main-poster-header">The furniture brand for the <br> future, with timeless designs</h2>
+            <a class="main-poster-link" href="#">View collection</a>
+            <p class="main-poster-subtext">A new era in eco friendly furniture with Avelon, the French luxury retail brand <br>
                 with nice fonts, tasteful colors and a beautiful way to display things digitally <br>
                 using modern web technologies.</p>
         </div>
-        <img src="assets/img/RightImage.png" height="584" width="520" alt="Стул справа формы">
+        <img class="main-poster-right" src="assets/img/RightImage.png" height="584" width="520" alt="Стул справа формы">
     </section>
-    <section>
-        <h2>What makes our brand different</h2>
-        <div>
-            <div>
+    <section id="difference" class="difference-section">
+        <h2 class="difference-section-header">What makes our brand different</h2>
+        <div class="difference-section-items">
+            <div class="difference-section-item">
 
                 <img src="assets/icons/Delivery.png" height="24" width="24" alt = " иконка доставка">
                 <h4>Next day as standard</h4>
                 <p>Order before 3pm and get your order <br> the next day as standard</p>
             </div>
-            <div>
+            <div class="difference-section-item">
 
                 <img src="assets/icons/Checkmark.png" height="24" width="24" alt = "иконка готово">
                 <h4>Made by true artisans</h4>
                 <p>Handmade crafted goods made with <br> real passion and craftmanship</p>
             </div>
-            <div>
+            <div class="difference-section-item">
 
                 <img src="assets/icons/Purchase.png" height="24" width="24" alt = "иконка покупка">
                 <h4>Unbeatable prices</h4>
                 <p>For our materials and quality you <br> won’t find better prices anywhere</p>
             </div>
-            <div>
+            <div class="difference-section-item">
                 <img src="assets/icons/Sprout.png" height="24" width="24" alt = "иконка растение">
                 <h4>Recycled packaging</h4>
                 <p>We use 100% recycled packaging to <br> ensure our footprint is manageable</p>
             </div>
         </div>
     </section>
-    <section>
-        <h2>New ceramics</h2>
-        <div>
-            <div>
+    <section id="new-products" class="new-products-section">
+        <h2 class="new-products-section-header">New ceramics</h2>
+        <div class="new-products-section-items">
+            <div class="new-products-section-item">
                 <img src="assets/img/Photo.png" height="375" width="305" alt = "Пример мебели">
 
                 <h4>The Dandy chair</h4>
                 <p>£250</p>
             </div>
-            <div>
+            <div class="new-products-section-item">
                 <img src="assets/img/Photo1.png" height="375" width="305" alt = "Пример мебели">
                 <h4>Rustic Vase Set</h4>
                 <p>£155</p>
             </div>
-            <div>
+            <div class="new-products-section-item">
                 <img src="assets/img/Photo2.png" height="375" width="305" alt = "Пример мебели">
                 <h4>The Silky Vase</h4>
                 <p>£125</p>
             </div>
-            <div>
+            <div class="new-products-section-item">
                 <img src="assets/img/Photo3.png" height="375" width="305" alt = "Пример мебели">
                 <h4>The Lucy Lamp</h4>
                 <p>£399</p>
             </div>
         </div>
-        <a href="#">View collection</a>
+        <a class="new-products-section-link" href="#">View collection</a>
     </section>
-    <section>
-        <h2>Our popular products</h2>
-        <div>
-            <div>
+    <section id="populars" class="populars-section">
+        <h2 class="populars-section-header">Our popular products</h2>
+        <div class="populars-section-items">
+            <div class="populars-section-item">
                 <img src="assets/img/Large.png" height="375" width="630" alt = "Пример мебели">
                 <h4>The Poplar suede sofa</h4>
                 <p>£980</p>
             </div>
-            <div>
+            <div class="populars-section-item">
                 <img src="assets/img/Photo.png" height="375" width="305" alt = "Пример мебели">
                 <h4>The Dandy chair</h4>
                 <p>£250</p>
             </div>
-            <div>
+            <div class="populars-section-item">
                 <img src="assets/img/Photo3.png" height="375" width="305" alt = "Пример мебели">
                 <h4>The Dandy chair</h4>
                 <p>£250</p>
             </div>
         </div>
-        <a href="#">View collection</a>
+        <a class="populars-section-link" href="#">View collection</a>
     </section>
-    <section>
-        <div>
-            <h1>Join the club and get the benefits</h1>
-            <p>Sign up for our newsletter and receive exclusive offers on new <br>ranges, sales, pop up stores and more</p>
-            <form>
-                <label>
-                    <input type="text" placeholder="your@email.com">
+    <div id="contacts" class="contact-section">
+        <div class="contact-section-container">
+            <h1 class="contact-container-header">Join the club and get the benefits</h1>
+            <p class="contact-container-text">Sign up for our newsletter and receive exclusive offers on new <br>ranges, sales, pop up stores and more</p>
+            <form class="contact-form">
+                <label class="">
+                    <input name="email" class="contact-form-input" type="email" placeholder="your@email.com">
                 </label>
-                <button type="submit">Sign up</button>
-            </form>
-        </div>
-    </section>
-    <section>
-        <div>
-            <h2>From a studio in London to a global brand with <br> over 400 outlets</h2>
-            <p>When we started Avion, the idea was simple. Make high quality furniture <br> affordable and available for the mass market. </p>
-            <p>Handmade, and lovingly crafted furniture and homeware is what we live, <br> breathe and design so our Chelsea boutique become the hotbed for the <br> London interior design community.</p>
-        </div>
-        <img src="assets/img/Image.png" height="603" width="720" alt = "Диван">
-        <a href="#">Get in touch</a>
-    </section>
-</main>
-<footer>
-    <div>
-        <ul>
-            <li>Menu</li>
-            <li>New arrivals</li>
-            <li>Best sellers</li>
-            <li>Recently viewed</li>
-            <li>Popular this week</li>
-            <li>All products</li>
-        </ul>
-        <ul>
-            <li>Categories</li>
-            <li>Crockery</li>
-            <li>Furniture</li>
-            <li>Homeware</li>
-            <li>Plant pots</li>
-            <li>Chairs</li>
-            <li>Crockery</li>
-        </ul>
-        <ul>
-            <li>Our company</li>
-            <li>About us</li>
-            <li>Vacancies</li>
-            <li>Contact us</li>
-            <li>Privacy</li>
-            <li>Returns policy</li>
-        </ul>
-        <div>
-            <p>Join our mailing list</p>
-            <form>
-                <label>
-                    <input type="text" placeholder="your@email.com">
-                </label>
-                <button type="submit">Sign up</button>
+                <button class="contact-form-button" type="submit">Sign up</button>
             </form>
         </div>
     </div>
-    <hr>
-    <div>
+    <div id="ideals" class="ideals-section">
+        <div class="ideals-section-container">
+            <div class="ideals-container-left">
+                <h2>From a studio in London to a global brand with <br> over 400 outlets</h2>
+                <p>When we started Avion, the idea was simple. Make high quality furniture <br> affordable and available for the mass market. </p>
+                <p>Handmade, and lovingly crafted furniture and homeware is what we live, <br> breathe and design so our Chelsea boutique become the hotbed for the <br> London interior design community.</p>
+                <a class="ideals-section-link" href="#">Get in touch</a>
+            </div>
+            <img class="ideals-container-right" src="assets/img/Image.png" height="603" width="720" alt = "Диван">
+        </div>
+
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-links">
+        <div class="footer-links-container">
+            <div class="footer-links-list">
+                <p >Menu</p>
+                <a href="#main">New arrivals</a>
+                <a href="#main">Best sellers</a>
+                <a href="#main">Recently viewed</a>
+                <a href="#main">Popular this week</a>
+                <a href="#main">All products</a>
+            </div>
+            <div class="footer-links-list">
+                <p>Categories</p>
+                <a href="#main">Crockery</a>
+                <a href="#main">Furniture</a>
+                <a href="#main">Homeware</a>
+                <a href="#main">Plant pots</a>
+                <a href="#main">Chairs</a>
+                <a href="#main">Crockery</a>
+            </div>
+            <div class="footer-links-list">
+                <p >Our company</p>
+                <a href="#main">About us</a>
+                <a href="#main">Vacancies</a>
+                <a href="#main">Contact us</a>
+                <a href="#main">Privacy</a>
+                <a href="#main">Returns policy</a>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <p class="footer-contact-text">Join our mailing list</p>
+            <form class="footer-contact-form">
+                <label>
+                    <input class="footer-contact-form-input" type="text" placeholder="your@email.com">
+                </label>
+                <button class="footer-contact-form-button" type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-info">
         <p>Copyright 2022 Avion LTD</p>
-        <div style="background: black">
-            <img src="assets/icons/skype.png" height="24" width="24" alt = "Лого skype">
-            <img src="assets/icons/linkedin.png" height="24" width="24" alt = "Лого linkedin">
-            <img src="assets/icons/pinterest.png" height="24" width="24" alt = "Лого pinterest">
+        <div>
+            <img src="assets/icons/images.png" height="24" width="24" alt = "Лого skype">
+            <img src="assets/icons/youtube-play.png" height="24" width="24" alt = "Лого linkedin">
+            <img src="assets/icons/telegram.png" height="24" width="24" alt = "Лого pinterest">
         </div>
     </div>
 </footer>
