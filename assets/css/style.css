@@ -1,378 +1,569 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-:root{
+:root {
     --text-foreground: rgb(42, 36, 75);
     --text-background: rgb(249, 249, 249);
+    --accent: rgb(82, 77, 110);
 }
 
 * {
-    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-a{
-    text-decoration: none;
-}
-button:hover{
-    background-color: rgb(202, 202, 202);
-    transition: all  0.2s;
-}
-a:hover{
-    color: rgb(11, 9, 19);
-    transition: all  0.2s;
-    font-weight: bold;
-    cursor: pointer;
-}
 
 body {
     font-family: "Quicksand", sans-serif;
     font-optical-sizing: auto;
-    font-style: normal;
+    color: var(--text-foreground);
+    background: white;
+    line-height: 1.6;
 }
 
-.logo {
-    padding-left: 30px;
+a {
+    text-decoration: none;
+    color: inherit;
+    /* базовый transition для всех ссылок */
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* ====================== HEADER ====================== */
 .navigation {
     display: flex;
     justify-content: space-between;
-    padding: 1.2rem 0;
-    margin: 0 1rem;
-    border-bottom: 2px rgba(0, 0, 0, 0.10) solid;
+    align-items: center;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 1000;
 }
-.basic-link{
-    color: var(--text-foreground);
+
+.logo {
+    padding-left: 0;
 }
+
 .navigation-right {
     display: flex;
     gap: 20px;
+    align-items: center;
 }
 
-.header-sections{
-    width: 48%;
+.header-sections {
     display: flex;
-    margin: 20px auto;
-    list-style: none;
-    color: var(--text-foreground);
+    justify-content: center;
+    gap: 3vw;
+    margin: 2rem auto;
+    padding: 0 5%;
+    flex-wrap: wrap;
     font-size: 1.1rem;
-    justify-content: space-around;
 }
 
+.header-sections a {
+    white-space: nowrap;
+}
+
+/* ====================== MAIN CONTENT ====================== */
 .main-content {
     max-width: 100vw;
+    overflow-x: hidden;
+}
 
-    margin-top: 5rem;
-}
-.main-content > section {
-    padding: 0 5%;
-}
+/* Главный баннер */
 .main-poster {
-    display: flex;
-    color: whitesmoke;
-
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    align-items: stretch;
+    color: white;
+    min-height: 420px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.main-poster-left{
-    width: 55%;
+.main-poster-left {
+    padding: 4rem 5rem;
+    background: var(--text-foreground);
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    background: var(--text-foreground);
-}
-.main-poster-right{
-    width: 45%;
-    height: auto;
+    justify-content: center;
+    gap: 2rem;
 }
 
-.main-poster-header{
-    font-size: 2.2rem;
-    font-weight: normal;
-}
-
-.main-poster-link {
-    background: rgb(82, 77, 110);
-    width: fit-content;
-    margin-top: 50px;
-    text-decoration: none;
-    color: whitesmoke;
-    padding: 20px 30px;
+.main-poster-header {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 .main-poster-subtext {
+    font-size: 1.1rem;
+    opacity: 0.9;
     margin-top: auto;
-    font-size: 1.2rem;
-    font-weight: lighter;
 }
 
+.main-poster-link {
+    background: var(--accent);
+    padding: 1.2rem 2rem;
+    width: fit-content;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.main-poster-link:hover {
+    background: white;
+    color: var(--accent);
+}
+
+.main-poster-right {
+    width: 100%;
+}
+
+.main-poster-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Различия */
 .difference-section {
-    color: var(--text-foreground);
-    font-weight: lighter;
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 50px ;
+    padding: 8rem 5%;
+    text-align: center;
 }
 
 .difference-section-header {
-    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
 }
 
 .difference-section-items {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1.2rem;
-    font-weight: normal;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    text-align: left;
+    place-items: center;
 }
 
-.difference-section-item {
-    display: flex;
-    flex-direction: column;
-    gap: 15px ;
+.difference-section-item h4 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.3rem;
 }
 
-.new-products-section{
-    margin-top: 12rem;
-    display: flex;
-    flex-direction: column;
-    color: var(--text-foreground);
-}
-
-.new-products-section-header{
-    font-size: 2rem;
-    margin-bottom: 3rem;
-    align-self: start;
-}
-
-.new-products-section-items{
-    display: flex;
-    justify-content: space-between;
-}
-
-.new-products-section-item{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    font-size: 1.2rem;
-}
-.new-products-section-link {
-    margin-top: 3rem;
-    text-decoration: none;
-    width: fit-content;
-    color: var(--text-foreground);
-    align-self: center;
-    padding: 1.2rem 2.2rem;
-    background: var(--text-background);
-    font-size: 1.1rem;
-}
-
+/* Новые товары */
+.new-products-section,
 .populars-section {
-    margin-top: 9rem;
-    color: var(--text-foreground);
-    display: flex;
-    flex-direction: column;
+    padding: 6rem 5%;
 }
 
+.new-products-section-header,
 .populars-section-header {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.populars-section-items{
-    display: flex;
-    justify-content: space-between;
-}
-.populars-section-item{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    font-size: 1.2rem;
-}
-
-.populars-section-link{
-    margin-top: 3rem;
-    text-decoration: none;
-    width: fit-content;
-    color: var(--text-foreground);
-    align-self: center;
-    margin-bottom: 1rem;
-    padding: 1.2rem 2.2rem;
-    background: var(--text-background);
-    font-size: 1.1rem;
-}
-
-.contact-section{
-    padding: 5rem;
-    background: rgb(249, 249, 249);
-
-}
-
-.contact-section-container{
-    padding: 8rem 5rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    color: var(--text-foreground);
-    background: white;
-}
-
-.contact-container-header{
-    font-size: 2.4rem;
-}
-
-.contact-container-text{
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
     text-align: center;
-    font-size: 1.1rem;
 }
 
-.contact-form{
-    width: 45%;
+.new-products-section-items,
+.populars-section-items {
     display: flex;
-    justify-content: center;
-}
-.contact-form label{
-    flex-grow: 1;
-}
-.contact-form-button{
-    padding: 1.2rem 2.2rem;
-    border: none;
-    font-size: 1.1rem;
-
-    background: var(--text-foreground);
-    color: var(--text-background);
+    justify-content: space-evenly;
+    gap: 1rem;
 }
 
-.contact-form-input{
-    width: 100%;
-    height: 100%;
-    border: none;
-    padding-left:1.2rem;
-    background: var(--text-background);
+.populars-section-item {
+    max-width: 95vw;
+    height: auto;
 }
-.contact-form-input:focus, .contact-form-input:active{
-    background: #dfdfdf;
-    outline: none;
-}
-
-.ideals-section{
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
-
-.ideals-section-container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.ideals-container-left{
-    padding: 5rem 5rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    color: var(--text-foreground);
-
-}
-
-.ideals-container-right{
-    width: 50%;
+img {
+    max-width: 100%;
     height: auto;
 }
 
-.ideals-section-link{
-    margin-top: auto;
+.new-products-section-item,
+.populars-section-item {
+    /* ...existing code...
+       здесь только добавляем анимацию */
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: pointer;
+}
+
+.new-products-section-item:hover,
+.populars-section-item:hover {
+    transform: translateY(-6px) scale(1.02);
+
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.new-products-section-item img,
+.populars-section-item img {
+    /* чтобы картинка не "вылазила" при скейле карточки */
+    border-radius: 8px;
+}
+
+.new-products-section-link,
+.populars-section-link {
+    margin: 4rem auto 0;
+    padding: 1rem 2.5rem;
+    background: var(--text-background);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-weight: 500;
+    display: block;
     width: fit-content;
-    padding: 1.2rem 2.2rem;
+}
+.new-products-section-link:hover,
+.populars-section-link:hover {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+
+}
+
+/* Контакты / Подписка */
+.contact-section {
     background: var(--text-background);
-    margin-bottom: 15%;
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: var(--text-foreground);
+    padding: 8rem 5%;
 }
 
-.footer{
-    background: var(--text-foreground);
-    color: var(--text-background);
-    padding: 5rem 5rem 0;
+.contact-section-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 8rem 4rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
 }
 
-.footer-links{
+.contact-container-header {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-form {
     display: flex;
-    justify-content: space-between;
-}
-.footer-links-container{
-    width: 42%;
-    display: flex;
-    justify-content: space-between;
- }
-
-.footer-contact{
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    width: 49%;
-}
-.footer-links-list{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap:13px;
-    font-size: 1rem;
-
-}
-.footer-links a{
-    color: var(--text-background);
-}
-.footer-links-list p:nth-child(1){
-    font-weight: bold;
+    max-width: 500px;
+    margin: 2rem auto 0;
+    height: 60px;
 }
 
-.footer-contact-form{
-    display: flex;
-}
-.footer-contact-form > label{
-    flex-grow: 1;
-}
-
-.footer-contact-form-button{
-    padding: 1.2rem 2.2rem;
+.contact-form-input {
+    flex: 1;
+    padding: 0 1.5rem;
     border: none;
-    font-size: 1.1rem;
-
-    color: var(--text-foreground);
     background: var(--text-background);
-}
-
-.footer-contact-form-input{
-    width: 100%;
+    font-size: 1.1rem;
+    border-radius: 4px 0 0 4px;
     height: 100%;
+}
+
+.contact-form-button {
+    padding: 0 2.5rem;
+    background: var(--text-foreground);
+    color: white;
     border: none;
-    padding: 0 1.7rem;
-    background: rgb(73, 68, 101);
-    font-size: 1.08rem;
-    text-align: left;
-    color: var(--text-background);
+    border-radius: 0 4px 4px 0;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Наши цели */
+.ideals-section {
+    padding: 10rem 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ideals-section-container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.ideals-container-left {
+    flex: 1;
+    padding: 0;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ideals-container-left a {
+    margin-top: 1rem;
 
 }
-.footer-contact-form-input:active, .footer-contact-form-input:focus{
-    background: #555555;
-    outline: none;
 
+.ideals-container-left h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    line-height: 1.3;
 }
-.footer-contact-form-input::placeholder{
-    color: var(--text-background);
+
+
+.ideals-container-right {
+    flex: 1;
+    width: 50%;
+    height: auto;
+    align-self: start;
+}
+
+.ideals-container-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.ideals-section-link {
+    width: fit-content;
+    padding: 1rem 2.5rem;
+    background: var(--text-background);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.ideals-section-link:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background: var(--text-foreground);
+    color: white;
+    padding: 6rem 5% 2rem;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+.footer-links-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links-list p {
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-links-list a {
+    display: block;
+    margin-bottom: 0.8rem;
+    opacity: 0.8;
+}
+
+.footer-contact-form {
+    display: flex;
+    height: 56px;
+    max-width: 400px;
+}
+
+.footer-contact-form-input {
+    flex: 1;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    padding: 0 1.5rem;
+    height: 100%;
+    color: white;
+    border-radius: 4px 0 0 4px;
+}
+
+.footer-contact-form-input:focus {
+    outline: 2px solid rgba(255,255,255,0.7);
+    outline-offset: 0;
+}
+
+.footer-contact-form-input::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-contact-form-button {
+    padding: 0 2rem;
+    background: var(--text-background);
+    color: var(--text-foreground);
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-weight: 600;
 }
 
 .footer-info {
-    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 0;
-    border-top: 1px solid #4e4c92;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
+.footer-info > div {
+    display: flex;
+    gap: 1.5rem;
+}
+
+/* ====================== АДАПТИВ ====================== */
+
+/* Планшеты (≤1024px) */
+@media (max-width: 1024px) {
+    .main-poster {
+        grid-template-columns: 1fr;
+        min-height: 380px;
+    }
+
+    .main-poster-right{
+        display: none;
+    }
+
+    .main-poster-left {
+        width: 100%;
+        padding: 3.5rem 8vw;
+        text-align: center;
+    }
+
+    .main-poster-link {
+        margin: 0 auto;
+    }
+
+    .ideals-section-container {
+        flex-direction: column;
+    }
+
+    .ideals-container-right {
+        order: -1;
+    }
+    .new-products-section-items,
+    .populars-section-items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 3rem;
+    }
+    .new-products-section-items,
+    .populars-section-items {
+        place-items: center;
+    }
+
+}
+
+/* Мобильные большие (≤768px) */
+@media (max-width: 768px) {
+    .navigation {
+        padding: 1rem 5%;
+    }
+
+    .header-sections {
+        display: none; /* можно заменить на бургер-меню позже */
+    }
+
+    .main-poster {
+        min-height: 340px;
+    }
+
+    .main-poster-left {
+        padding: 3rem 6vw 2.5rem;
+    }
+
+    .main-poster-header {
+        font-size: clamp(1.7rem, 4.8vw, 2.3rem);
+    }
+
+    .difference-section-items {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-form {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contact-form-input,
+    .contact-form-button {
+        border-radius: 4px;
+    }
+
+    .contact-form-button {
+        margin-top: 1rem;
+        padding: 1rem;
+    }
 
 
+}
+
+/* Мобильные маленькие (≤480px) */
+@media (max-width: 480px) {
+    .navigation-right img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .main-poster {
+        min-height: 300px;
+    }
+
+    .main-poster-left {
+        padding: 2.5rem 1.5rem 2rem;
+    }
+
+    .main-poster-header {
+        font-size: 1.8rem;
+    }
+
+    .main-poster-subtext {
+        font-size: 0.95rem;
+    }
+
+    .main-poster-link {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    .difference-section {
+        padding: 4rem 5%;
+    }
+
+    .difference-section-items {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+
+
+
+    .new-products-section,
+    .populars-section {
+        padding: 4rem 5%;
+    }
+
+    .contact-section-container {
+        padding: 4rem 2rem;
+    }
+
+    .ideals-container-right{
+        min-width: 65%;
+        place-self: center;
+        height: auto;
+
+    }
+    .footer-links {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .footer-contact-form {
+        max-width: 100%;
+    }
+}
