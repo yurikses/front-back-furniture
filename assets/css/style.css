@@ -132,10 +132,7 @@ header{
     font-weight: 500;
 }
 
-.main-poster-link:hover {
-    background: white;
-    color: var(--accent);
-}
+
 
 .main-poster-right {
     width: 100%;
@@ -208,13 +205,7 @@ img {
     cursor: pointer;
 }
 
-.new-products-section-item:hover,
-.populars-section-item:hover {
-    transform: translateY(-6px) scale(1.02);
 
-    background-color: #ffffff;
-    border-radius: 10px;
-}
 
 .new-products-section-item img,
 .populars-section-item img {
@@ -233,14 +224,7 @@ img {
     display: block;
     width: fit-content;
 }
-.new-products-section-link:hover,
-.populars-section-link:hover {
-    background: var(--accent);
-    color: #ffffff;
-    border-color: var(--accent);
-    transform: translateY(-2px);
 
-}
 
 /* Контакты / Подписка */
 .contact-section {
@@ -347,10 +331,7 @@ img {
     border-radius: 4px;
 }
 
-.ideals-section-link:hover {
-    background: var(--accent);
-    color: white;
-}
+
 
 /* Footer */
 .footer {
@@ -432,9 +413,35 @@ img {
 }
 
 /* ====================== АДАПТИВ ====================== */
+@media (hover: hover) {
+    .new-products-section-link:hover,
+    .populars-section-link:hover {
+        background: var(--accent);
+        color: #ffffff;
+        border-color: var(--accent);
+        transform: translateY(-2px);
 
+    }
+    .ideals-section-link:hover {
+        background: var(--accent);
+        color: white;
+    }
+    .new-products-section-item:hover,
+    .populars-section-item:hover {
+        transform: translateY(-6px) scale(1.02);
+
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .main-poster-link:hover{
+        background: white;
+        color: var(--accent);
+    }
+}
 /* Планшеты (≤1024px) */
 @media (max-width: 1024px) {
+
+
     .main-poster {
         grid-template-columns: 1fr;
         min-height: 380px;
@@ -476,6 +483,7 @@ img {
 
 /* Мобильные большие (≤768px) */
 @media (max-width: 768px) {
+
     .navigation {
         padding: 1rem 5%;
     }
@@ -518,6 +526,32 @@ img {
 
 /* Мобильные маленькие (≤480px) */
 @media (max-width: 480px) {
+    .new-products-section-link:active,
+    .populars-section-link:active {
+        background: var(--accent);
+        color: #ffffff;
+        border-color: var(--accent);
+        transform: translateY(-2px);
+
+    }
+
+    .ideals-section-link:active {
+        background: var(--accent);
+        color: white;
+    }
+
+    .new-products-section-item:active,
+    .populars-section-item:active {
+        transform: translateY(-6px) scale(1.02);
+
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+    .main-poster-link:active{
+        background: white;
+        color: var(--accent);
+    }
+
     .navigation-right{
         display: none;
     }
