@@ -11,6 +11,8 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    transition: all 0.25s ease-in-out;
+    font-size: 16px;
 }
 
 
@@ -30,6 +32,13 @@ a {
 }
 
 /* ====================== HEADER ====================== */
+header{
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    background: white;
+    z-index: 99;
+}
 .navigation {
     display: flex;
     justify-content: space-between;
@@ -38,7 +47,6 @@ a {
     border-bottom: 1px solid rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
-    background: white;
     z-index: 1000;
 }
 
@@ -50,6 +58,11 @@ a {
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+.navigation-right--mobile {
+    display: none;
+
 }
 
 .header-sections {
@@ -66,9 +79,14 @@ a {
     white-space: nowrap;
 }
 
+.side-menu {
+    display: none;
+}
+
 /* ====================== MAIN CONTENT ====================== */
 .main-content {
     max-width: 100vw;
+
     overflow-x: hidden;
 }
 
@@ -80,7 +98,9 @@ a {
     color: white;
     min-height: 420px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main-poster-left {
@@ -460,9 +480,7 @@ img {
         padding: 1rem 5%;
     }
 
-    .header-sections {
-        display: none; /* можно заменить на бургер-меню позже */
-    }
+
 
     .main-poster {
         min-height: 340px;
@@ -500,11 +518,74 @@ img {
 
 /* Мобильные маленькие (≤480px) */
 @media (max-width: 480px) {
+    .navigation-right{
+        display: none;
+    }
+    .header-sections {
+        display: none; /* можно заменить на бургер-меню позже */
+    }
+    .navigation{
+        & img {
+            height: 22px;
+            width: auto;
+        }
+    }
+
+
+    .navigation-burger-button{
+        border: none;
+        background: none;
+        cursor: pointer;
+        height: 38px;
+        width: 38px;
+        padding: 3px;
+        &:hover{
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 100%;
+        }
+
+        & img {
+            height: 32px;
+            width: 32px;
+        }
+    }
+
+    .side-menu{
+        position: fixed;
+        transition: all 0.2s;
+        display: flex;
+        top: 0;
+        right: -100%;
+        flex-direction: column;
+        width: 100%;
+        height: fit-content;
+        padding:10rem 3rem;
+        background: rgba(255, 255, 255, 0.91);
+
+        & .basic-link{
+            padding: 0.3rem  1rem;
+            border-radius: 8px;
+        }
+        & .basic-link:hover {
+            background: rgba(0, 0, 0, 0.15);
+        }
+
+        &.side-active{
+            right: 0;
+        }
+
+    }
+
+
     .navigation-right img {
         width: 20px;
         height: 20px;
     }
-
+    .navigation-right--mobile{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
     .main-poster {
         min-height: 300px;
     }
@@ -553,6 +634,42 @@ img {
         height: auto;
 
     }
+
+    footer {
+        position: relative;
+    }
+
+    .up-mobile-button{
+        z-index: 99;
+        position: fixed;
+        top: 80%;
+        right: 2rem;
+        padding: 1rem 2rem;
+        color: whitesmoke;
+        background: var(--accent);
+        border-radius: 30px;
+        border: 1px solid rgba(0,0,0,0);
+
+        &:hover {
+            background: rgb(211, 211, 211);
+            border-color: var(--accent);
+            color: black;
+        }
+
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
+        &:active{
+            outline: none;
+            box-shadow: none;
+        }
+
+        &.hidden {
+            right: -100%;
+        }
+    }
+
     .footer-links {
         grid-template-columns: 1fr;
         text-align: center;
